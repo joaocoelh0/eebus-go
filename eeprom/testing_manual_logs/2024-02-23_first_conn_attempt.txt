@@ -1,0 +1,60 @@
+EVSE:
+Starting: C:\Users\COO8AV\go\bin\dlv.exe dap --listen=127.0.0.1:57486 from C:\Users\COO8AV\OneDrive - Bosch Group\Documents\EEBUS_MSc\enbility\eebus-go/cmd/evse
+DAP server listening at: 127.0.0.1:57486
+Type 'dlv help' for list of commands.
+2024-02-23 18:29:53 INFO  Local SKI:  428f20285ff4ac03795e1dc446f13b5113f8ed8d
+2024-02-23 18:31:56 DEBUG starting websocket server on :4716
+2024-02-23 18:32:48 DEBUG mdns: announce
+2024-02-23 18:32:48 DEBUG mdns: using zeroconf
+2024-02-23 18:32:48 DEBUG mdns: start search
+2024-02-23 18:40:20 DEBUG ski: 1118e59d07c05355f5cf0e8a81e319d816487b32 name: Demo-HEMS-123456789 brand: Demo model: HEMS typ: EnergyManagementSystem identifier: Demo-HEMS-123456789 register: false host: AV-C-000KF.local. port: 4715 addresses: [10.143.156.216 192.168.1.68 192.168.80.1]
+2024-02-23 18:40:20 DEBUG delaying connection to 1118e59d07c05355f5cf0e8a81e319d816487b32 by 2.085s to minimize double connection probability
+2024-02-23 18:40:22 DEBUG trying to connect to 1118e59d07c05355f5cf0e8a81e319d816487b32 at 10.143.156.216
+2024-02-23 18:40:22 DEBUG initiating connection to 1118e59d07c05355f5cf0e8a81e319d816487b32 at 10.143.156.216:4715/ship/
+2024-02-23 18:40:32 DEBUG connection to 1118e59d07c05355f5cf0e8a81e319d816487b32 failed:  read tcp 10.143.156.216:58537->10.4.103.143:8080: i/o timeout
+2024-02-23 18:40:32 DEBUG trying to connect to 1118e59d07c05355f5cf0e8a81e319d816487b32 at 192.168.1.68
+2024-02-23 18:40:32 DEBUG initiating connection to 1118e59d07c05355f5cf0e8a81e319d816487b32 at 192.168.1.68:4715/ship/
+2024/02/23 18:40:37 websocket: failed to close network connection: close tcp 10.143.156.216:58541->10.4.103.143:8080: use of closed network connection
+2024-02-23 18:40:42 DEBUG connection to 1118e59d07c05355f5cf0e8a81e319d816487b32 failed:  context deadline exceeded
+2024-02-23 18:40:42 DEBUG trying to connect to 1118e59d07c05355f5cf0e8a81e319d816487b32 at 192.168.80.1
+2024-02-23 18:40:42 DEBUG initiating connection to 1118e59d07c05355f5cf0e8a81e319d816487b32 at 192.168.80.1:4715/ship/
+2024/02/23 18:40:42 websocket: failed to close network connection: close tcp 10.143.156.216:58543->10.4.103.143:8080: use of closed network connection
+2024/02/23 18:40:47 websocket: failed to close network connection: close tcp 10.143.156.216:58547->10.4.103.143:8080: use of closed network connection
+2024/02/23 18:40:52 websocket: failed to close network connection: close tcp 10.143.156.216:58551->10.4.103.143:8080: use of closed network connection
+2024-02-23 18:40:52 DEBUG connection to 1118e59d07c05355f5cf0e8a81e319d816487b32 failed:  context deadline exceeded
+2024-02-23 18:40:52 DEBUG trying to connect to 1118e59d07c05355f5cf0e8a81e319d816487b32 at AV-C-000KF.local.
+2024-02-23 18:40:52 DEBUG initiating connection to 1118e59d07c05355f5cf0e8a81e319d816487b32 at AV-C-000KF.local.:4715/ship/
+2024-02-23 18:40:53 DEBUG connection to 1118e59d07c05355f5cf0e8a81e319d816487b32 failed: websocket: bad handshake
+Detaching and terminating target process
+connection error: Error: read ECONNRESET
+dlv dap (14288) exited with code: 0
+
+
+HEMS:
+Starting: C:\Users\COO8AV\go\bin\dlv.exe dap --listen=127.0.0.1:58526 from C:\Users\COO8AV\OneDrive - Bosch Group\Documents\EEBUS_MSc\enbility\eebus-go/cmd/hems
+DAP server listening at: 127.0.0.1:58526
+Type 'dlv help' for list of commands.
+2024-02-23 18:40:20 INFO  Local SKI:  1118e59d07c05355f5cf0e8a81e319d816487b32
+2024-02-23 18:40:20 DEBUG starting websocket server on :4715
+2024-02-23 18:40:20 DEBUG mdns: announce
+2024-02-23 18:40:20 DEBUG mdns: using zeroconf
+2024-02-23 18:40:20 DEBUG mdns: start search
+2024-02-23 18:40:20 DEBUG ski: 428f20285ff4ac03795e1dc446f13b5113f8ed8d name: Demo-EVSE-234567890 brand: Demo model: EVSE typ: ChargingStation identifier: Demo-EVSE-234567890 register: false host: AV-C-000KF.local. port: 4716 addresses: [10.143.156.216 192.168.1.68 192.168.80.1]
+2024-02-23 18:40:20 DEBUG delaying connection to 428f20285ff4ac03795e1dc446f13b5113f8ed8d by 2.542s to minimize double connection probability
+2024-02-23 18:40:23 DEBUG trying to connect to 428f20285ff4ac03795e1dc446f13b5113f8ed8d at 10.143.156.216
+2024-02-23 18:40:23 DEBUG initiating connection to 428f20285ff4ac03795e1dc446f13b5113f8ed8d at 10.143.156.216:4716/ship/
+2024-02-23 18:40:33 DEBUG connection to 428f20285ff4ac03795e1dc446f13b5113f8ed8d failed:  read tcp 10.143.156.216:58539->10.4.103.143:8080: i/o timeout
+2024-02-23 18:40:33 DEBUG trying to connect to 428f20285ff4ac03795e1dc446f13b5113f8ed8d at 192.168.1.68
+2024-02-23 18:40:33 DEBUG initiating connection to 428f20285ff4ac03795e1dc446f13b5113f8ed8d at 192.168.1.68:4716/ship/
+2024/02/23 18:40:38 websocket: failed to close network connection: close tcp 10.143.156.216:58542->10.4.103.143:8080: use of closed network connection
+2024/02/23 18:40:43 websocket: failed to close network connection: close tcp 10.143.156.216:58545->10.4.103.143:8080: use of closed network connection
+2024-02-23 18:40:43 DEBUG connection to 428f20285ff4ac03795e1dc446f13b5113f8ed8d failed:  context deadline exceeded
+2024-02-23 18:40:43 DEBUG trying to connect to 428f20285ff4ac03795e1dc446f13b5113f8ed8d at 192.168.80.1
+2024-02-23 18:40:43 DEBUG initiating connection to 428f20285ff4ac03795e1dc446f13b5113f8ed8d at 192.168.80.1:4716/ship/
+2024/02/23 18:40:48 websocket: failed to close network connection: close tcp 10.143.156.216:58548->10.4.103.143:8080: use of closed network connection
+2024-02-23 18:40:53 DEBUG connection to 428f20285ff4ac03795e1dc446f13b5113f8ed8d failed:  context deadline exceeded
+2024-02-23 18:40:53 DEBUG trying to connect to 428f20285ff4ac03795e1dc446f13b5113f8ed8d at AV-C-000KF.local.
+2024-02-23 18:40:53 DEBUG initiating connection to 428f20285ff4ac03795e1dc446f13b5113f8ed8d at AV-C-000KF.local.:4716/ship/
+2024/02/23 18:40:53 websocket: failed to close network connection: close tcp 10.143.156.216:58552->10.4.103.143:8080: use of closed network connection
+2024-02-23 18:40:53 DEBUG connection to 428f20285ff4ac03795e1dc446f13b5113f8ed8d failed: websocket: bad handshake
+Detaching and terminating target process

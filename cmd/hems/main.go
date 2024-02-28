@@ -50,12 +50,40 @@ func (h *hems) run() {
 		})
 		fmt.Println(string(pemdata))
 
+		//--------------------------- ADDED CODE ---------------------------
+		//write the certificate to a file
+		crtFile, err := os.Create("../../eeprom/hems.crt")
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		defer crtFile.Close()
+		_, err = crtFile.Write(pemdata)
+		if err != nil {
+			log.Fatal(err)
+		}
+		//--------------------------- ADDED CODE ---------------------------
+
 		b, err := x509.MarshalECPrivateKey(certificate.PrivateKey.(*ecdsa.PrivateKey))
 		if err != nil {
 			log.Fatal(err)
 		}
 		pemdata = pem.EncodeToMemory(&pem.Block{Type: "EC PRIVATE KEY", Bytes: b})
 		fmt.Println(string(pemdata))
+
+		//--------------------------- ADDED CODE ---------------------------
+		//write the private key to a file
+		keyFile, err := os.Create("../../eeprom/hems.key")
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		defer keyFile.Close()
+		_, err = keyFile.Write(pemdata)
+		if err != nil {
+			log.Fatal(err)
+		}
+		//--------------------------- ADDED CODE ---------------------------
 	}
 
 	port, err := strconv.Atoi(os.Args[1])
